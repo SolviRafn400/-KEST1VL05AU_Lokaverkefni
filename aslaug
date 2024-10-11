@@ -1,0 +1,9 @@
+Skrifið leiðbeiningar fyrir Áslaugu þar sem þið útskýrið hvernig á að búa til notendur og setja í rétta hópa ásamt því að útskýra hvernig hún getur virkjað aðganga Erlendar og Erlu.
+
+Til að búa til notendur með bash skel, heimasvæði og rétt hópa skaltu nota skipunina:
+         sudo useradd -m -s /bin/bash -G allir,forritun notandanafn
+og breyta lykilorði með:
+         echo "notandanafn:lykilorð" | sudo chpasswd.
+Fyrir hópana getur þú notað usermod til að bæta notendum við hópa, t.d. sudo usermod -aG hóp nafn.
+Til að virkja aftur aðganga Erlendar og Erlu, notar þú skipunina:
+         sudo usermod -U erla og sudo usermod -U erlendur.
